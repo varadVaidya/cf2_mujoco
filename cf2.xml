@@ -107,16 +107,15 @@
       <geom mesh="cf2_collision_30" class="collision"/>
       <geom mesh="cf2_collision_31" class="collision"/>
 
-      <site name="actuationold" type="sphere" size="0.001 0.001 0.001" rgba="1 0 0 1"
-        pos="-0.0005265561 -0.0007265506 0.0041451351"/>
       <site name="actuation" type="sphere" size="0.001 0.001 0.001" rgba="1 0 0 1"
         pos="0 0 0"/>
     </body>
   </worldbody>
   <actuator>
-    <motor ctrllimited="true" ctrlrange="0 0.1" gear="0 0 1 0 0 0" site="actuation" name="body_thrust"/>
+    <motor ctrllimited="true" ctrlrange="0 0.35" gear="0 0 1 0 0 0" site="actuation" name="body_thrust"/>
     <motor ctrllimited="true" ctrlrange="-0.00001 0.00001" gear="0 0 0 -1 0 0" site="actuation" name="x_moment"/>
     <motor ctrllimited="true" ctrlrange="-0.00001 0.00001" gear="0 0 0 0 -1 0" site="actuation" name="y_moment"/>
     <motor ctrllimited="true" ctrlrange="-0.00001 0.00001" gear="0 0 0 0 0 -1" site="actuation" name="z_moment"/>
   </actuator>
 </mujoco>
+
